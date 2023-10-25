@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<servlet>
+  <servlet-name>CurrencyConversionController</servlet-name>
+  <servlet-class>com.org.controller.CurrencyConversionController</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>CurrencyConversionController</servlet-name>
+  <url-pattern>/convert</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>ConversionHistoryController</servlet-name>
+    <servlet-class>com.org.controller.ConversionHistoryController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConversionHistoryController</servlet-name>
+    <url-pattern>/history</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LanguageChangeController</servlet-name>
+    <servlet-class>com.org.controller.LanguageChangeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LanguageChangeController</servlet-name>
+    <url-pattern>/languageChange</url-pattern>
+  </servlet-mapping>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>

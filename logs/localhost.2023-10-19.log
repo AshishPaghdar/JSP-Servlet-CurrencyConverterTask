@@ -1,0 +1,280 @@
+19-Oct-2023 12:26:23.447 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Marking servlet [ConversionHistoryServlet] as unavailable
+19-Oct-2023 12:26:23.448 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Allocate exception for servlet [ConversionHistoryServlet]
+	java.lang.ClassCastException: class com.org.controller.ConversionHistoryController cannot be cast to class jakarta.servlet.Servlet (com.org.controller.ConversionHistoryController is in unnamed module of loader org.apache.catalina.loader.ParallelWebappClassLoader @3b79fd76; jakarta.servlet.Servlet is in unnamed module of loader java.net.URLClassLoader @76ccd017)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:865)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:649)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:115)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+19-Oct-2023 12:27:31.958 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log Marking servlet [ConversionHistoryController] as unavailable
+19-Oct-2023 12:27:31.959 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Allocate exception for servlet [ConversionHistoryController]
+	java.lang.ClassCastException: class com.org.controller.ConversionHistoryController cannot be cast to class jakarta.servlet.Servlet (com.org.controller.ConversionHistoryController is in unnamed module of loader org.apache.catalina.loader.ParallelWebappClassLoader @6a57ae10; jakarta.servlet.Servlet is in unnamed module of loader java.net.URLClassLoader @36aa7bc2)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:865)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:649)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:115)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+19-Oct-2023 13:10:38.526 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [ConversionHistoryController] in context with path [/JSP-Servlet-Currency-Converter] threw exception
+	java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:503)
+		at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:339)
+		at com.org.controller.ConversionHistoryController.doGet(ConversionHistoryController.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+19-Oct-2023 18:03:39.545 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [88] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+An error occurred at line: [152] in the jsp file: [/index.jsp]
+Syntax error on tokens, Expression expected instead
+149:                 <input type="text" name="amount" id="amount" class="form-control" />
+150:                 <span id="amountError" class="error-message"></span>
+151:                 <% if (request.getAttribute("errorMessage") != null) {
+152:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+153:                  } %>
+154:             </div>
+155: 
+
+
+An error occurred at line: [152] in the jsp file: [/index.jsp]
+Syntax error on tokens, delete these tokens
+149:                 <input type="text" name="amount" id="amount" class="form-control" />
+150:                 <span id="amountError" class="error-message"></span>
+151:                 <% if (request.getAttribute("errorMessage") != null) {
+152:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+153:                  } %>
+154:             </div>
+155: 
+
+
+An error occurred at line: [152] in the jsp file: [/index.jsp]
+Syntax error, insert ";" to complete BlockStatements
+149:                 <input type="text" name="amount" id="amount" class="form-control" />
+150:                 <span id="amountError" class="error-message"></span>
+151:                 <% if (request.getAttribute("errorMessage") != null) {
+152:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+153:                  } %>
+154:             </div>
+155: 
+
+
+An error occurred at line: [163] in the jsp file: [/index.jsp]
+Syntax error on tokens, Expression expected instead
+160:                 />
+161:              <span id="dateError" class="error-message"></span>
+162:                <% if (request.getAttribute("errorMessage") != null) {
+163:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+164:                 } %>
+165:             </div>
+166: 
+
+
+An error occurred at line: [163] in the jsp file: [/index.jsp]
+Syntax error on tokens, delete these tokens
+160:                 />
+161:              <span id="dateError" class="error-message"></span>
+162:                <% if (request.getAttribute("errorMessage") != null) {
+163:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+164:                 } %>
+165:             </div>
+166: 
+
+
+An error occurred at line: [163] in the jsp file: [/index.jsp]
+Syntax error, insert ";" to complete BlockStatements
+160:                 />
+161:              <span id="dateError" class="error-message"></span>
+162:                <% if (request.getAttribute("errorMessage") != null) {
+163:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+164:                 } %>
+165:             </div>
+166: 
+
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [406] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [88] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+An error occurred at line: [152] in the jsp file: [/index.jsp]
+Syntax error on tokens, Expression expected instead
+149:                 <input type="text" name="amount" id="amount" class="form-control" />
+150:                 <span id="amountError" class="error-message"></span>
+151:                 <% if (request.getAttribute("errorMessage") != null) {
+152:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+153:                  } %>
+154:             </div>
+155: 
+
+
+An error occurred at line: [152] in the jsp file: [/index.jsp]
+Syntax error on tokens, delete these tokens
+149:                 <input type="text" name="amount" id="amount" class="form-control" />
+150:                 <span id="amountError" class="error-message"></span>
+151:                 <% if (request.getAttribute("errorMessage") != null) {
+152:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+153:                  } %>
+154:             </div>
+155: 
+
+
+An error occurred at line: [152] in the jsp file: [/index.jsp]
+Syntax error, insert ";" to complete BlockStatements
+149:                 <input type="text" name="amount" id="amount" class="form-control" />
+150:                 <span id="amountError" class="error-message"></span>
+151:                 <% if (request.getAttribute("errorMessage") != null) {
+152:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+153:                  } %>
+154:             </div>
+155: 
+
+
+An error occurred at line: [163] in the jsp file: [/index.jsp]
+Syntax error on tokens, Expression expected instead
+160:                 />
+161:              <span id="dateError" class="error-message"></span>
+162:                <% if (request.getAttribute("errorMessage") != null) {
+163:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+164:                 } %>
+165:             </div>
+166: 
+
+
+An error occurred at line: [163] in the jsp file: [/index.jsp]
+Syntax error on tokens, delete these tokens
+160:                 />
+161:              <span id="dateError" class="error-message"></span>
+162:                <% if (request.getAttribute("errorMessage") != null) {
+163:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+164:                 } %>
+165:             </div>
+166: 
+
+
+An error occurred at line: [163] in the jsp file: [/index.jsp]
+Syntax error, insert ";" to complete BlockStatements
+160:                 />
+161:              <span id="dateError" class="error-message"></span>
+162:                <% if (request.getAttribute("errorMessage") != null) {
+163:                   <p class="text-danger"><%= request.getAttribute("errorMessage") %>
+164:                 } %>
+165:             </div>
+166: 
+
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [388] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [406] in the generated java file: [C:\Users\Admin\IdeaProjects\JSP-Servlet-Currency-Converter\work\Catalina\localhost\JSP-Servlet-Currency-Converter\org\apache\jsp\index_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)

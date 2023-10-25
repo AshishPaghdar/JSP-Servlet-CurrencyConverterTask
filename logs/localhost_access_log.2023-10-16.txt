@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:17:55:22 +0530] "GET /JSP-Servlet-Currency-Converter HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:17:55:23 +0530] "GET /JSP-Servlet-Currency-Converter/ HTTP/1.1" 200 57

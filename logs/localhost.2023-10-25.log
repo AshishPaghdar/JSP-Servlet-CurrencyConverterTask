@@ -1,0 +1,1118 @@
+25-Oct-2023 00:23:55.273 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [/index.jsp (line: [6], column: [0]) Attribute [prefix] invalid for tag [setBundle] according to TLD] with root cause
+	org.apache.jasper.JasperException: /index.jsp (line: [6], column: [0]) Attribute [prefix] invalid for tag [setBundle] according to TLD
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:292)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:115)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.checkXmlAttributes(Validator.java:1303)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:916)
+		at org.apache.jasper.compiler.Node$CustomTag.accept(Node.java:1556)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2377)
+		at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2433)
+		at org.apache.jasper.compiler.Node$Visitor.visit(Node.java:2439)
+		at org.apache.jasper.compiler.Node$Root.accept(Node.java:469)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2377)
+		at org.apache.jasper.compiler.Validator.validateExDirectives(Validator.java:1885)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:229)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:396)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:27:02.739 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+Locale cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+Locale cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:28:09.646 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [java.lang.NullPointerException] with root cause
+	java.lang.NullPointerException
+		at java.base/java.util.Locale.<init>(Locale.java:744)
+		at java.base/java.util.Locale.<init>(Locale.java:801)
+		at org.apache.jsp.index_jsp._jspService(index_jsp.java:265)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:39:55.664 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:40:32.730 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:40:45.412 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:42:39.050 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [119] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+116: </head>
+117: <%
+118:     String[] supportedLanguages = {"en", "fr", "it", "es", "de", "hi", "gu", "ta", "zh"};
+119:     Map<String, Map<String, String>> errorMessages = new HashMap<>();
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+Map cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [123] in the jsp file: [/index.jsp]
+HashMap cannot be resolved to a type
+120: 
+121:     for (String lang : supportedLanguages) {
+122:         ResourceBundle bundle = ResourceBundle.getBundle("bundle/messages", new Locale(lang));
+123:         Map<String, String> messages = new HashMap<>();
+124: 
+125:         // Define the keys you want to read from the properties file
+126:         messages.put("dateError", bundle.getString("date.error.message"));
+
+
+An error occurred at line: [193] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+190:                 <input type="text" name="amount" id="amount" class="form-control" />
+191:                 <span id="amountError" class="error-message" style="display: none;">
+192:                         ${requestScope.amountError}
+193:         <%= errorBundle.getString("amount.error.message") %>
+194:                 </span>
+195:             </div>
+196: 
+
+
+An error occurred at line: [204] in the jsp file: [/index.jsp]
+errorBundle cannot be resolved
+201:                 />
+202:              <span id="dateError" class="error-message" style="display: none;">
+203:                          ${requestScope.dateError}
+204:         <%= errorBundle.getString("date.error.message") %>
+205:              </span>
+206:             </div>
+207: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:43:30.421 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+Locale cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+Locale cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 00:43:46.264 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+Locale cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+ResourceBundle cannot be resolved
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+An error occurred at line: [118] in the jsp file: [/index.jsp]
+Locale cannot be resolved to a type
+115: </head>
+116: <%
+117:   String language = (String) session.getAttribute("selectedLanguage");
+118:   ResourceBundle errorBundle = ResourceBundle.getBundle("bundle/messages", new Locale(language));
+119: %>
+120: <body>
+121:  <form action="languageChange" method="post" id="languageForm">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 11:16:58.766 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [LanguageChangeController] in context with path [/JSP-Servlet-Currency-Converter] threw exception
+	java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key amount.error.message
+		at java.base/java.util.ResourceBundle.getObject(ResourceBundle.java:570)
+		at java.base/java.util.ResourceBundle.getString(ResourceBundle.java:527)
+		at com.org.controller.LanguageChangeController.doPost(LanguageChangeController.java:32)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 11:22:54.571 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [LanguageChangeController] in context with path [/JSP-Servlet-Currency-Converter] threw exception
+	java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key amount.error.message
+		at java.base/java.util.ResourceBundle.getObject(ResourceBundle.java:570)
+		at java.base/java.util.ResourceBundle.getString(ResourceBundle.java:527)
+		at com.org.controller.LanguageChangeController.doPost(LanguageChangeController.java:32)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 11:24:06.361 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [/index.jsp (line: [178], column: [27]) No tag [error] defined in tag library imported with prefix [fmt]] with root cause
+	org.apache.jasper.JasperException: /index.jsp (line: [178], column: [27]) No tag [error] defined in tag library imported with prefix [fmt]
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:292)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:98)
+		at org.apache.jasper.compiler.Parser.parseCustomTag(Parser.java:1228)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1469)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:138)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:106)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:211)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:396)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 11:26:27.474 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/JSP-Servlet-Currency-Converter] threw exception [/index.jsp (line: [6], column: [0]) Attribute [prefix] invalid for tag [setBundle] according to TLD] with root cause
+	org.apache.jasper.JasperException: /index.jsp (line: [6], column: [0]) Attribute [prefix] invalid for tag [setBundle] according to TLD
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:292)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:115)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.checkXmlAttributes(Validator.java:1303)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:916)
+		at org.apache.jasper.compiler.Node$CustomTag.accept(Node.java:1556)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2377)
+		at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2433)
+		at org.apache.jasper.compiler.Node$Visitor.visit(Node.java:2439)
+		at org.apache.jasper.compiler.Node$Root.accept(Node.java:469)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2377)
+		at org.apache.jasper.compiler.Validator.validateExDirectives(Validator.java:1885)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:229)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:396)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+25-Oct-2023 11:28:34.816 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [LanguageChangeController] in context with path [/JSP-Servlet-Currency-Converter] threw exception
+	java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key amount.error.message
+		at java.base/java.util.ResourceBundle.getObject(ResourceBundle.java:570)
+		at java.base/java.util.ResourceBundle.getString(ResourceBundle.java:527)
+		at com.org.controller.LanguageChangeController.doPost(LanguageChangeController.java:32)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
