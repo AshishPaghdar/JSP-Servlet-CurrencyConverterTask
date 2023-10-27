@@ -50,34 +50,31 @@
         }
 
         a {
-            display: block;
+            align-items:center;
             text-align: center;
             margin-top: 20px;
             color: #35495e;
             text-decoration: none;
             font-weight:bolder;
+            background-color:#35495e;
+            color:white;
+            margin:5px;
+            padding:8px;
         }
-
-        .pagination {
-            text-align: center;
-            margin-top: 10px;
+        .pagination li {
+                  display: inline;
+              }
+        .pagination{
+          display:flex;
+          justify-content:center;
         }
-
-        .pagination a {
-            color: #35495e;
-            text-decoration: none;
-            display: inline-block;
-            padding: 8px 16px;
-        }
-
-        .pagination a:hover {
-            background-color: #35495e;
-            color: #fff;
-        }
-
-        .pagination .active {
-            background-color: #35495e;
-            color: white;
+        .back{
+          display:flex;
+          width:20%;
+          margin:0 auto;
+          justify-content:center;
+          background-color:#007bff;
+          padding:10px 4px;
         }
     </style>
 </head>
@@ -140,24 +137,60 @@
         </c:forEach>
     </table>
 
-    <div class="pagination">
-        <c:forEach begin="1" end="${totalPages}" var="pageNumber">
-            <c:url var="pageUrl" value="history">
-                <c:param name="page" value="${pageNumber}" />
-                <c:param name="recordsPerPage" value="${recordsPerPage}" />
-            </c:url>
-            <c:choose>
-                <c:when test="${pageNumber == page}">
-                    <a class="active" href="${pageUrl}">${pageNumber}</a>
-                </c:when>
-                <c:otherwise>
-                    <a href="${pageUrl}">${pageNumber}</a>
-                </c:otherwise>
-            </c:choose>
-        </c:forEach>
-    </div>
+ <div class="pagination ">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <c:if test="${totalPages > 0 && totalPages >= p}">
+                <li class="page-item">
+                    <c:choose>
+                        <c:when test="${p > 1}">
+                            <a class="page-link" href="history?p=${p-1}" tabindex="-1">Previous</a>
+                        </c:when>
+                        <c:otherwise>
+                            <a class="page-link disabled" tabindex="-1">Previous</a>
+                        </c:otherwise>
+                    </c:choose>
+                </li>
 
-    <a href="index.jsp"><fmt:message key="backToCurrencyConverter" />
+                <c:choose>
+                    <c:when test="${totalPages > 5 && p >= 3}">
+                        <c:forEach var="i" begin="${p - 2}" end="${p + 2}">
+                            <li class="page-item">
+                                <a class="page-link" href="history?p=${i}">${i}</a>
+                            </li>
+                        </c:forEach>
+                    </c:when>
+                    <c:when test="${totalPages > 5 && p < 3}">
+                        <c:forEach var="i" begin="1" end="5">
+                            <li class="page-item">
+                                <a class="page-link" href="history?p=${i}">${i}</a>
+                            </li>
+                        </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+                        <c:forEach var="i" begin="1" end="${totalPages}">
+                            <li class="page-item">
+                                <a class="page-link" href="history?p=${i}">${i}</a>
+                            </li>
+                        </c:forEach>
+                    </c:otherwise>
+                </c:choose>
+
+                <li class="page-item">
+                    <c:choose>
+                        <c:when test="${p < totalPages}">
+                            <a class="page-link" href="history?p=${p + 1}">Next</a>
+                        </c:when>
+                        <c:otherwise>
+                            <a class="page-link disabled">Next</a>
+                        </c:otherwise>
+                    </c:choose>
+                </li>
+            </c:if>
+        </ul>
+    </nav>
+ </div>
+    <a href="index.jsp" class="back"><fmt:message key="backToCurrencyConverter" />
 </a>
 </body>
 </html>

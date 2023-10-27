@@ -13,13 +13,20 @@ import java.util.List;
 public class ConversionHistoryController extends HttpServlet {
     private final ConversionHistoryService conversionHistoryService = new ConversionHistoryServiceImpl(new ConversionHistoryDAO());
 
+    // Updated doGet method
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            int page = 1; // Default to page 1 if not provided in the URL
-            if (request.getParameter("page") != null) { //indicates which page of conversion history records to be displayed
-                page = Integer.parseInt(request.getParameter("page"));
+            int pageNo=0;
+            int start =0;
+
+            String p1 = request.getParameter("p");
+            int pageSize = 10;
+            if (p1 == null) {
+                pageNo = 1;
+            } else {
+                pageNo = Integer.parseInt(p1);
+                start = (pageNo - 1) * pageSize;
             }
-            int recordsPerPage = 10;
 
             String fromCurrency = request.getParameter("fromCurrency");
             String toCurrency = request.getParameter("toCurrency");
@@ -31,31 +38,25 @@ public class ConversionHistoryController extends HttpServlet {
                 toCurrency = "";
             }
 
-            List<ConversionHistory> conversionHistoryList = conversionHistoryService.getConversionHistory();
+            List<ConversionHistory> conversionHistoryList;
 
             if (!fromCurrency.isEmpty() || !toCurrency.isEmpty()) {
-                conversionHistoryList = conversionHistoryService.filterConversionHistory(fromCurrency,toCurrency);
+                // Filter the history based on fromCurrency and toCurrency
+//                System.out.println("Filtering by fromCurrency: " + fromCurrency + ", toCurrency: " + toCurrency);
+                conversionHistoryList = conversionHistoryService.getFilteredHistory(fromCurrency, toCurrency);
+            } else {
+                // If no filter parameters, retrieve all history
+                conversionHistoryList = conversionHistoryService.getConversionHistory(start, pageSize);
             }
+//            System.out.println("Retrieved data: " + conversionHistoryList);
 
-            // Calculate total number of pages based on the number of records and records per page
-            int totalRecords = conversionHistoryList.size();
-            int totalPages = (int) Math.ceil((double) totalRecords / recordsPerPage);
 
-            // Calculate the start and end index for the current pagem to extract subset of records for current page
-            int startIndex = (page - 1) * recordsPerPage;
-            int endIndex = Math.min(startIndex + recordsPerPage, totalRecords);
-
-            // Extract records for the current page, records to be displayed on current page
-            List<ConversionHistory> currentPageRecords = conversionHistoryList.subList(startIndex, endIndex);
-
-            // Set the conversion history list for the current page as an attribute
-            request.setAttribute("conversionHistoryList", currentPageRecords);
-
-            // Set pagination parameters as attributes
-            request.setAttribute("page", page);
+            double totalCount = conversionHistoryService.totalcount();
+            long totalPages = (long) Math.ceil(totalCount / pageSize);
+            request.setAttribute("conversionHistoryList", conversionHistoryList);
             request.setAttribute("totalPages", totalPages);
-            request.setAttribute("recordsPerPage", recordsPerPage);
-
+            request.setAttribute("pageSize", pageSize);
+            request.setAttribute("p", pageNo);
             // Forward the request to the history.jsp page
             request.getRequestDispatcher("/history.jsp").forward(request, response);
         } catch (Exception e) {
@@ -64,4 +65,6 @@ public class ConversionHistoryController extends HttpServlet {
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "An error occurred while fetching conversion history.");
         }
     }
+
+
 }
