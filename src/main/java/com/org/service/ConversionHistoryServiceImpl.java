@@ -3,7 +3,7 @@ package com.org.service;
 import com.org.dao.ConversionHistoryDAO;
 import com.org.model.ConversionHistory;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.List;
 
 public class ConversionHistoryServiceImpl implements ConversionHistoryService {
@@ -19,20 +19,22 @@ public class ConversionHistoryServiceImpl implements ConversionHistoryService {
     }
 
     @Override
-    public List<ConversionHistory> getConversionHistory() throws ClassNotFoundException {
-        return conversionHistoryDAO.getConversionHistory();
+    public List<ConversionHistory> getConversionHistory(int start, int pageSize) throws ClassNotFoundException {
+        return conversionHistoryDAO.getConversionHistory(start,pageSize);
     }
-    public List<ConversionHistory> filterConversionHistory(String fromCurrency, String toCurrency) throws ClassNotFoundException {
-        List<ConversionHistory> allHistory = conversionHistoryDAO.getConversionHistory();
-        List<ConversionHistory> filteredHistory = new ArrayList<>();
 
-        for (ConversionHistory history : allHistory) {
-            if ((fromCurrency == null || fromCurrency.isEmpty() || history.getOriginalCurrency().equals(fromCurrency))
-                    && (toCurrency == null || toCurrency.isEmpty() || history.getTargetCurrency().equals(toCurrency))) {
-                filteredHistory.add(history);
-            }
+    @Override
+    public long totalcount() {
+        try {
+            return conversionHistoryDAO.totalCount();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            // You might want to handle the exceptions or return an appropriate value here
         }
+        return 0; // Return a default value (0) or handle the exception appropriately
+    }
 
-        return filteredHistory;
+    public List<ConversionHistory> getFilteredHistory(String fromCurrency, String toCurrency) {
+        return conversionHistoryDAO.getFilteredHistory(fromCurrency, toCurrency);
     }
 }

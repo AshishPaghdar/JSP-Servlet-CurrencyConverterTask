@@ -23,13 +23,17 @@ public class ConversionHistory {
         this.timestamp = timestamp;
     }
 
+    public ConversionHistory() {
+
+    }
+
     public long getUserId() {
         return userId;
     }
 
-//    public void setUserId(long userId) {
-//        this.userId = userId;
-//    }
+    public long setUserId(double userId) {
+        return this.userId;
+    }
 
     public String getOriginalCurrency() {
         return originalCurrency;
